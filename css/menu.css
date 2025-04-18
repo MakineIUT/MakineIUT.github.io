@@ -1,0 +1,53 @@
+.menu-section {
+	margin-top: 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 40px;
+}
+
+.boire-card {
+	background: #fff;
+	border-radius: 30px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+	width: 300px;
+	padding: 20px;
+	text-align: center;
+	transition: transform 0.3s ease;
+}
+
+.boire-card:hover {
+	transform: translateY(-10px);
+}
+
+.boire-card img {
+	max-width: 35%;
+	border-radius: 20px;
+}
+
+.boire-card h3 {
+	margin: 15px 0 10px;
+	font-size: 1.5em;
+	color: #333;
+}
+
+.boire-card p {
+	font-size: 0.95em;
+	color: #555;
+}
+
+.boire-card button {
+	margin-top: 15px;
+	background: #a0233b;
+	color: white;
+	padding: 10px 25px;
+	border-radius: 30px;
+	border: none;
+	cursor: pointer;
+	font-weight: 500;
+	transition: background 0.3s ease;
+}
+
+.boire-card button:hover {
+	background: #7d1b2f;
+}

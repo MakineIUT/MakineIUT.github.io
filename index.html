@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 <link rel="shortcut icon" href="img/icon.png" />
+	<title>TCHAI</title>
+</head>
+<body>
+	<section>
+		<div class="rond">
+			
+		</div>
+		<header>
+			<a href="#" class="logo"><img src="img/logo2.png" class="top"></a>
+			<ul>
+				<li><a href="#" class="menu">Accueil</a></li>
+				<li><a href="html/menu.html" class="menu">Menu</a></li>
+				<li><a href="#" class="menu">Nouveautées</a></li>
+				<li><a href="html/contact.html" class="menu">Contact</a></li>
+			</ul>
+		</header>
+		<div class="content">
+			<div class="textbox">
+				<h2>It's not just tea<br>It's <span>Tchai</span></h2>
+				<p>Découvrez TCHAI l'essence des Comores dans Chaque Gorgée.
+				<br>Offrez-vous une expérience rafraîchissante avec nos boissons sans sucre ajouté au 
+				Corossol, Hibiscus et Tamarin, parfaitement élaborées à partir d’ingrédients naturels.
+				<br>Vivez une expérience de thé glacé unique, conçue pour éveiller vos sens et vous offrir un moment de pure fraîcheur.</p>
+				<button>En savoir plus ?</button> 
+			</div>
+			<div class="imgBox">
+				<img src="img/M.png" class="TCHAI">
+			</div>
+		</div>
+		<ul class="pouce">
+			<li> <img src="img/M.png" class="gouts"onclick="imgSlider('img/M.png');ChangeCouleurRond('#c02a47');ChangeCouleurtexte('#ffc2d4');ChangeCouleurBoutton('#c02a47');logoSlider('img/logo2.png');"></li>
+
+			<li> <img src="img/L.png" class="gouts"onclick="imgSlider('img/L.png');ChangeCouleurRond('#4F7942');ChangeCouleurtexte('#82cc9c');ChangeCouleurBoutton('#4F7942');logoSlider('img/logo3.png')"></li>
+
+			<li> <img src="img/R.png" class="gouts"onclick="imgSlider('img/R.png');ChangeCouleurRond('#a46b0f');ChangeCouleurtexte('#a48657');ChangeCouleurBoutton('#a46b0f');logoSlider('img/logo4.png')"></li>
+		</ul>
+		<ul class="sci">
+			<li><a href="https://facebook.com/" target="_blank"><img src="img/facebook.png"></a></li>
+			<li><a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png"></a></li>
+			<li><a href="https://twitter.com/" target="_blank"><img src="img/twitter.png"></a></li>
+		</ul>
+	</section>
+
+	<script type="text/javascript">
+		function imgSlider(anything){
+			document.querySelector('.TCHAI').src = anything;
+		}
+
+		function logoSlider(anything){
+			document.querySelector('.top').src = anything;
+		}
+
+		function ChangeCouleurRond(color) {
+    const rond = document.querySelector('.rond');
+    rond.style.background = color;
+
+	}
+		function ChangeCouleurtexte(color) {
+    const span = document.querySelector('span');
+    const menuLinks = document.querySelectorAll('.menu');
+
+    span.style.color = color;
+
+
+    menuLinks.forEach(link => {
+        link.style.backgroundImage = `linear-gradient(to right, ${color}, ${color} 50%, #000 50%)`;
+         const underline = link.querySelector('::before');
+        if (underline) {
+            underline.style.background = color;
+        }
+    });
+}
+		function ChangeCouleurBoutton(color) {
+			const button = document.querySelector('button');
+			button.style.background = color
+		}
+	</script>
+</body>
+</html>
